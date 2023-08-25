@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="chitale.js"></script>
+	
+		<style type="text/css">
+		input[type="button"],input[type="reset"]
+		{
+			background-color: #000123;
+			color: white;
+			padding: 3px;
+			border-radius: 4px;
+		}
+		input[type="button"]:hover,input[type="reset"]:hover{
+			background-color: crimson;
+			cursor: pointer;
+		}
+	</style>
+		
+	</script>
+</head>
+<body>
+	<center>
+		<form name="f1">
+			<table cellpadding="7" border="1">
+				<tr bgcolor="gold">
+					<th colspan="2"><h2>Chitale Dairy</h2></th>
+				</tr>
+				<tr>
+					<td>Customer Name</td>
+					<td><input type="text" name="cname"></td>
+				</tr>
+
+				<tr>
+					<td>Type of Milk</td>
+					<td>
+						<input type="radio" name="tom" value="Cow" onclick="setMilkRate()">Cow Milk
+						<input type="radio" name="tom" value="Buffalo" onclick="setMilkRate()">Buffalo Milk
+					</td>
+				</tr>
+
+				<tr>
+					<td>Rate</td>
+					<td>
+						<input type="text" name="rate">
+					</td>
+				</tr>
+				<tr>
+					<td>Quantity</td>
+					<td>
+						<input type="text" name="qty" onkeyup="bill()">
+					</td>
+				</tr>
+				<!-- <tr>
+					<td align="center" colspan="2"><input type="Button" value="Bill Amount">
+					<input type="reset" value="Reset"></td>
+
+				</tr> -->
+				<tr>
+					<td>Bill Amount</td>
+					<td><input type="text" name="billamt"></td>
+				</tr>
+
+				<tr>
+					<td align="center" colspan="2">
+						<input type="button" value="print Bill" onclick="print()">
+					</td>
+				</tr>
+			</table>
+			
+		</form>
+	</center>
+
+</body>
+</html>

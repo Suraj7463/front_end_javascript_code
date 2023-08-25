@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function clock()
+		{
+			var d=new Date();
+			var t=d.toLocaleTimeString();
+			document.getElementById("showclock_id").innerHTML=t;
+			
+			run_clock();
+		}
+		function run_clock()
+		{
+			setTimeout("clock()",1000);
+		}
+	</script>
+	<style type="text/css">
+		span{
+			background-color: black;
+			color: green;
+			width: 100px;
+			padding: 10px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body onload="clock()">
+	<span id="showclock_id"></span>
+
+
+</body>
+</html>

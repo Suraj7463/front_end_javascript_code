@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+	<style type="text/css">
+
+		#a{
+			font-size: 50px;
+			color: red;
+			text-decoration-style: solid;
+			text-decoration: underline;
+
+		}
+		div{
+			width: 500px;
+			height: 400px;
+			margin:0 auto;
+			border: 1px solid red;
+			padding:100px;
+			box-sizing: border-box;
+			box-shadow: 5px 7px black;
+			background-color: gold;
+			border-radius: 20px;
+		}
+		.bd{
+			margin-top: 5px;
+			border-radius: 15px 50px;
+			background-color: crimson;
+			width: 25%;
+			margin-left:15%;
+		}
+		.bd:hover{
+			color: red;
+			font-size:solid;
+			background-color: blue;
+
+		}
+		.myinput{
+			border-radius: 5px;
+			padding: 5px;
+			outline-color: red;
+			border-color: green;
+			width: 100%;
+			margin-bottom: 10px;
+
+		}
+
+	</style>
+</head>
+<body>
+	<center><h1 id="a">welcome to login page</h1></center>
+	<hr>
+	<div>
+		username:
+		<br>
+		<input type="text" name="uname" id="username" class="myinput" >
+		<br>
+		Password:
+		<br>
+		<input type="Password" name="pwd" id="pass" class="myinput">
+		<br>
+		<button onclick="login()" class="bd">submit</button>
+	
+	</div>
+	<script type="text/javascript">
+		function login()
+		{
+			var uname=document.getElementById("username").value;
+			var pwd=document.getElementById("pass").value;
+			if(uname=="world" && pwd=="123")
+			{
+				location.assign("file:///C:/Users/suraj%20dudhabhate/Desktop/SUBLIME/Javascript/date%20time/page.html")
+			}
+			else
+			{
+				window.alert("login fail")
+			}
+
+
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function myfun()
+		{
+			
+			var ratejs=parseInt(document.f1.rate.value);
+			var qtyjs=parseInt(document.f1.qty.value);
+			var s=ratejs*qtyjs;
+			document.getElementById("bill_id").innerHTML=s;
+
+			var gst=s*0.10;
+			var cgst=s*0.10;
+
+			document.getElementById("cgst_id").innerHTML=gst;
+			document.getElementById("sgst_id").innerHTML=cgst;
+		}
+		
+	</script>
+</head>
+<body>
+	<form name="f1">
+		<center>
+			<table align="center" border="1" cellpadding="5">
+				<tr>
+					<td colspan="2" align="center"><h1>Amazon</h1></td>
+				</tr>
+				<tr>
+					<td>Customer Name</td>
+					<td><input type="text" name="cname"></td>
+				</tr>
+				<tr>
+					<td>Procuct Rate</td>
+					<td><input type="text" name="rate" onclick="myfun()"></td>
+				</tr>
+				<tr>
+					<td>Product Quantity</td>
+					<td><input type="text" name="qty" onkeyup="myfun()"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="button" value="Bill amount" onclick="myfun()">
+						<input type="reset" value="reset">
+					</td>
+				</tr>
+				<tr>
+					<td>Bill amount</td>
+					<td><span id="bill_id"></span></td>
+				</tr>
+				<tr>
+					<td>CGST amount</td>
+					<td><span id="cgst_id"></span></td>
+				</tr>
+				<tr>
+					<td>SGST amount</td>
+					<td><span id="sgst_id"></span></td>
+				</tr>
+				
+			</table>
+		</center>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function pay()
+		{
+			var bonusjs=parseInt(document.f1.bonus.value);
+			var bs=parseInt(document.f1.bsal.value);
+			var ts=bs+bonusjs;
+			document.f1.tsal.value=ts;
+			if(ts>=20000)
+			{
+				var taxjs=ts/10;
+				document.f1.tax.value=taxjs;
+		        var hsjs=ts-taxjs;
+			    document.f1.hsal.value=hsjs;
+		    }
+		    else
+		    {
+		    	document.f1.tax.value=0;
+		    	document.f1.hsal.value=ts;
+		    }
+	
+
+
+
+		}
+		
+	</script>
+</head>
+<body>
+	<center>
+		<form name="f1">
+			<table cellpadding="7" border="1" >
+				<tr>
+				<td colspan="2" align="center" bgcolor="red"><h2>Divali Salary with Bonus</h2></td>
+			</tr>
+			<tr>
+				<td>Employee Name</td>
+				<td><input type="text" name="ename"></td>
+			</tr>
+			<tr>
+				<td>Basic Salary</td>
+				<td><input type="text" name="bsal"></td>
+			</tr>
+			<tr>
+				<td>Bonus</td>
+				<td><input type="radio" name="bonus" value="5000" onclick="pay()">Add Bonus 5000Rs;<br>
+					<input type="radio" name="bonus" value="3000" onclick="pay()">Add Bonus 3000Rs;<br>
+					<input type="radio" name="bonus" value="2000" onclick="pay()">Add Bonus 2000Rs;
+				</td>
+			</tr>
+			<tr>
+				<td>Total Salary </td>
+				<td><input type="text" name="tsal"></td>
+			</tr>
+			<tr>
+				<td>Tax 10%</td>																					
+				<td><input type="text" name="tax" onclick="pay()"></td>
+			</tr>
+			<tr>
+				<td>In Hand Salary</td>
+				<td><input type="text" name="hsal" onclick="pay()"></td>
+			
+			</tr>
+
+			</table>
+			
+		</form>
+	</center>
+
+</body>
+</html>

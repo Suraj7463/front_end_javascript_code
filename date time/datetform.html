@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function myfun()
+		{
+			var d=new Date()
+			var dd=d.getDate();
+			var monthArray=["jan","feb","mar","april","may"];
+			var mm=monthArray[d.getMonth()];
+			var yy=d.getFullYear();
+			var datejs=dd+"/"+mm+"/"+yy;
+			document.f1.pdate.value=datejs;
+
+			var qtyjs=parseInt(document.f1.qty.value);
+
+
+			var snamejs=parseInt(document.f1.sname.value);
+			
+			document.f1.tp.value=snamejs*qtyjs;
+			var ctime=d.toLocaleTimeString();
+			document.f1.ptime.value=ctime;
+
+			var book=document.f1.sname.value;
+	
+		}
+		
+	</script>
+</head>
+<body onload="myfun()">
+	<center>
+		<form name="f1">
+			<table cellpadding="7" border="1" align="center">
+				<tr>
+					<td colspan="2" align="center" bgcolor="red"><h2>Book Shop</h2></td>
+				</tr>
+				<tr>
+					<td>customer name</td>
+					<td><input type="text" name="cname"></td>
+				</tr>
+				<tr>
+					<td>subject</td>
+					<td>
+						<input type="radio" name="sname" value="200" onclick="myfun()">english
+						<input type="radio" name="sname" value="150"onclick="myfun()">marathi
+						<input type="radio" name="sname" value="275"onclick="myfun()">biology
+						<input type="radio" name="sname" value="250"onclick="myfun()">chemistry
+						<input type="radio" name="sname" value="175"onclick="myfun()">physics
+						<input type="radio" name="sname" value="300"onclick="myfun()">math
+
+					</td>
+				</tr>
+				<tr>
+					<td>book name</td>
+					<td><input type="text" name="bkn" ></td>
+				</tr>
+				<tr>
+					<td>quantity</td>
+					<td><input type="text" name="qty" onkeyup="myfun()"></td>
+				</tr>
+				<tr>
+					<td>total price</td>
+					<td><input type="text" name="tp"></td>
+				</tr>
+				<tr>
+					<td>parchese time</td>
+					<td><input type="text" name="ptime"></td>
+
+				</tr>
+				<tr>
+					<td>purches date</td>
+					<td><input type="text" name="pdate"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="button" value="print" onclick="print()">
+						<input type="reset" value="reset">
+					</td>
+				</tr>
+
+
+				
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function myfun()
+		{
+			var c=0;
+			var techjs=0;
+			for(i=0;i<=5;i++)
+			{
+				if(document.f1.tech[i].checked==true)
+				{
+					var techp=parseInt(document.f1.tech[i].value);
+					var techjs=techjs+techp;
+					var c=c+1;
+				}
+				document.f1.tp.value=techjs;
+			}
+			document.f1.tot.value=c;
+
+		
+		}
+		
+	</script>
+</head>
+<body>
+	<center>
+		<form name="f1">
+			<table cellpadding="7" align="center" border="1">
+				<tr>
+					<th colspan="2" align="center">
+						<h2>EMPLOYEE TRANING COST</h2></th>
+					</tr>
+					<tr>
+						<td>Name</td>
+						<td><input type="text" name="sname"></td>
+					</tr>
+					<tr>
+						<td>Tech</td>
+						<td>
+							<input type="checkbox" name="tech" value="10000" onclick="myfun()">C
+							<input type="checkbox" name="tech" value="20000" onclick="myfun()">JAVA
+							<input type="checkbox" name="tech" value="30000" onclick="myfun()">php
+							<input type="checkbox" name="tech" value="40000" onclick="myfun()">python
+							<input type="checkbox" name="tech" value="20000" onclick="myfun()">database
+							<input type="checkbox" name="tech" value="10000" onclick="myfun()">Unix
+
+						</td>
+					</tr>
+					<tr>
+						<td>Total Price</td>
+						<td><input type="text" name="tp" onclick="myfun()"></td>
+					</tr>
+					<tr>
+						<td>total tech</td>
+						<td><input type="text" name="tot" onkeyup="myfun()"></td>
+					</tr>
+	
+					<tr>
+						<td colspan="2" align="center">
+						<input type="submit" value="Register">
+						<input type="button" value="print" onclick="print()">
+					</td>
+					</tr>
+			
+				
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

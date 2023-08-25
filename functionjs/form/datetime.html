@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		var d=new Date();
+
+		var y=d.getFullYear();
+		document.write("<br> The Full year is "+y);
+
+		var m=d.getMonth();
+		document.write("<br> The month is "+m);
+		//jan feb mar........dec
+		//0    1              11
+
+		var date=d.getDate();
+		document.write("<br> The Date is "+date);//13
+
+
+		var day =d.getDay();
+		document.write("<br> The Day  is "+day)//4
+
+		//sun mon tue wen thus fri sat
+		// 0   1   2   3   4    5   6
+
+		var hh=d.getHours();
+		var mm=d.getMinutes();
+		var ss=d.getSeconds();
+		var ms=d.getMilliseconds();
+
+		document.write("<br>");
+		document.write(hh+":"+mm+":"+ss+":"+ms);
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

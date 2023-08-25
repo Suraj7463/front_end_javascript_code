@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		document.write("<table border='1' cellpading='5'>")
+		document.write("<tr>")
+		document.write("<td> studid </td>")
+		document.write("<td> name </td>")
+		document.write("<td> tech </td>")
+		document.write("<td> fees </td>")
+		document.write("</tr>")
+
+		var tad=0;
+		var tf=0;
+		var eoe;
+		var tni;
+
+		do
+		{
+			var studid=parseInt(prompt("enter student id"));
+			var name=prompt("enter student name");
+			var tech=prompt("enter name of technology");
+			var fees=parseInt(prompt("enter fees of technology"));
+
+			var tf=tf+fees;
+			tad++;
+			var eoe=30000;
+			var tni=tf-eoe;
+
+
+			document.write("<tr>")
+		    document.write("<td>"+studid+"</td>")
+		    document.write("<td>"+name+"</td>")
+		    document.write("<td>"+tech+"</td>")
+		    document.write("<td>"+fees+"</td>")
+		    document.write("</tr>")
+
+
+
+		    var ch=prompt("join other tech to press 1 otherwise press 2")
+
+
+
+
+
+
+
+		}while(ch==1)
+
+		document.write("<tr>");
+		document.write("<td colspan='3'>total admission student is </td>");
+		document.write("<td>"+tad+"</td>");
+		document.write("</tr>")
+
+		document.write("<tr>");
+		document.write("<td colspan='3'>total fees is </td>");
+		document.write("<td>"+tf+"</td>");
+		document.write("</tr>")
+
+
+		document.write("<tr>");
+		document.write("<td colspan='3'>enter the total expences </td>");
+		document.write("<td>"+eoe+"</td>");
+		document.write("</tr>")
+
+		document.write("<tr>");
+		document.write("<td colspan='3'>total net income is </td>");
+		document.write("<td>"+tni+"</td>");
+		document.write("</tr>")
+
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

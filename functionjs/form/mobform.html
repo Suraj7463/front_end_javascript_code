@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function mobile()
+		{
+			var mobjs=parseInt(document.f1.mob.value);
+			document.f1.mobp.value=mobjs;
+			var gstjs=mobjs*0.10;
+
+			document.f1.g.value=gstjs
+
+			document.f1.tp.value=gstjs+mobjs;
+		}
+		
+	</script>
+
+</head>
+<body>
+	<center>
+		<form name="f1">
+			<table cellpadding="7" align="center" border="1">
+				<tr>
+					<td colspan="2" align="center" bgcolor="red"><h2>Mobile shop</h2></td>
+				</tr>
+				<tr>
+					<td>costumer name</td>
+					<td><input type="text" name="cname"></td>
+				</tr>
+				<tr>
+					<td>mobile name</td>
+					<td><input type="radio" name="mob" value="9000" onclick="mobile()">poco
+						<input type="radio" name="mob" value="10000" onclick="mobile()">vivo
+						<input type="radio" name="mob" value="8000" onclick="mobile()">samsung
+						<input type="radio" name="mob" value="9543" onclick="mobile()">redim
+					</td>
+
+				</tr>
+				<tr>
+					<td>mobile price</td>
+					<td><input type="text" name="mobp"></td>
+				</tr>
+
+				<tr>
+					<td>GST</td>
+					<td><input type="text" name="g"></td>
+				</tr>
+				<tr>
+					<td>total price</td>
+					<td><input type="text" name="tp"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="button" value="print" onclick="print()">
+						<input type="reset"  value="reset">
+					</td>
+				</tr>
+				
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

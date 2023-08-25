@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function myfun()
+		{
+			var tmjs=0;
+			var s1=parseInt(document.f1.phy.value);
+			var s2=parseInt(document.f1.che.value);
+			var s3=parseInt(document.f1.math.value);
+			var tmjs=s1+s2+s3;
+			document.f1.tm.value=tmjs;
+			var perjs=tmjs/3;
+			document.f1.per.value=perjs;
+			if(perjs>=40)
+			{
+				document.f1.res.value="pass";
+			}	
+			else
+			{
+				document.f1.res.value="fail";
+			}
+		}	
+		
+	</script>
+</head>
+<body>
+	<center>
+		<form name="f1">
+			<table cellpadding="5">
+				<tr>
+					<td>
+						NAME
+					</td>
+					<td><input type="text" name="name"></td>
+				</tr>
+				<tr>
+					<td>physics</td>
+					<td><input type="text" name="phy"></td>
+				</tr>
+				<tr>
+					<td>chemistry</td>
+					<td><input type="text" name="che"></td>
+				</tr>
+				<tr>
+					<td>Mathematics</td>
+					<td><input type="text" name="math"></td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" value="Result" onclick="myfun()">
+						<input type="reset" name="Reset">
+					</td>
+				</tr>
+				<tr>
+					<td>Total Mark</td>
+					<td><input type="text" name="tm"></td>
+				</tr>
+				<tr>
+					<td>Percentage</td>
+					<td><input type="text" name="per"></td>
+				</tr>
+				<tr>
+					<td>Result</td>
+					<td><input type="text" name="res"></td>
+				</tr>
+				
+			</table>
+		</form>
+	</center>
+</body>
+</html>

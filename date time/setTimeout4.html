@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function sum_fun()
+		{
+			var s=0;
+			var a=parseInt(document.f1.num1.value);
+			var b=parseInt(document.f1.num2.value);
+			var s=a+b;
+			//document.write("sum of all number is"+s);
+			document.getElementById("xyz").innerHTML=s;
+		}
+		
+	</script>
+</head>
+<body>
+	<form name="f1">
+	<center>
+		<table cellpadding="5" border="1" >
+			<tr>
+				<td>Number-1</td>
+				<td>
+					<input type="text" name="num1" onclick="sum_fun">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Number-2
+				</td>
+				<td>
+					<input type="text" name="num2" onclick="sum_fun">
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<input type="button" value="Calculate" onclick="sum_fun()">
+				</td>
+				<td align="center">
+					<input type="reset" value="reset">
+				</td>
+			</tr>
+			<tr>
+				<td>Result is </td>
+				<td>
+					<span id="xyz"></span>
+				</td>
+			</tr>
+		</table>
+	</center>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function myfun()
+		{
+			var n1=parseInt(document.f1.num1.value);
+			var n2=parseInt(document.f1.num2.value);
+			var sum=n1+n2;
+			document.f1.show_res.value=sum;
+
+		}
+	</script>
+
+	
+</head>
+<body>
+	<form name="f1">
+		<table cellpadding="2">
+			<tr>
+				<td>Number-1</td>
+				<td><input type="text" name="num1"></td>
+			</tr>
+			<tr>
+				<td>Number-2</td>
+				<td><input type="text" name="num2"></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="calculate" onclick="myfun()"></td>
+				<td><input type="reset" value="clear data"></td>
+			</tr>
+			<tr>
+				<td>Result is</td>
+				<td>
+					<input type="text" name="show_res">
+				</td>
+			</tr>
+			
+		</table>
+	</form>
+
+</body>
+</html>

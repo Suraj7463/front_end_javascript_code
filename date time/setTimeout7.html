@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function myfun()
+		{
+			var comp=document.f1.cp.value;
+			var s="welcome to Accenture"
+			if(comp=="Accenture")
+			{
+				document.getElementById("sh_id").innerHTML=s;
+			}
+		}
+		
+	</script>
+</head>
+<body>
+	<form name="f1">
+		<center>
+			<table align="center" cellpadding="4" border="1">
+				<tr>
+				<td>click button</td>
+				
+					<td ><input type="button" value="Accenture">
+
+						<input type="button" name="cp" value="Capgemin">
+
+						<input type="button" name="cp" value="Amdocs">
+
+						<input type="button" name="cp" value="Amazon">
+					</td>
+
+				</tr>
+				<tr>
+					<td>show result</td>
+					<td><span id="sh_id"></span></td>
+				</tr>
+				
+			</table>
+		</center>
+	</form>
+
+</body>
+</html>

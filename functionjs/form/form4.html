@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function show_info_payment()
+		{
+			document.f1.showjob.value=document.f1.job.value;
+			document.f1.showname.value=document.f1.sname.value;
+		
+			var wg=document.wages.value;
+
+			var wd=document.f1.wdays.value;
+			document.fl.payment.value=wg*wd;
+		}
+	</script>
+</head>
+<body>
+	<center>
+		<form name="f1">
+			<table cellpadding="7" border="1">
+				<tr>
+					<td colspan="2" align="center" bgcolor="crimson"><h2>Employee Payment</h2></td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td><input type="text" name="sname" onclick="show_info_payment()"></td>
+				</tr>
+				<tr>
+					
+					<td>job</td>
+					<td>
+						<input type="radio" name="job" value="OManager" onclick="show_info_payment()">OManager
+						<input type="radio" name="job" value="OAnalyst" onclick="show_info_payment()">OAnalyst
+						<input type="radio" name="job" value="OPresident" onclick="show_info_payment()">OPresident
+					</td>
+
+				</tr>
+				<tr>
+					<td>Wages</td>
+					<td><input type="text" name="wages"></td>
+				</tr>
+				<tr>
+					<td>Wdays</td>
+					<td><input type="text" name="wdays"></td>
+				</tr>
+				<tr>
+					
+					<td colspan="2" align="center">
+						<input type="button" value="payment" onclick="show_info_payment()">
+					
+					<input type="button" value ="cancel data"></td>
+				</tr>
+				<tr>
+					<td>Employee Name</td>
+					<td><input type="text" name="showname"></td>
+				</tr>
+				<tr>
+					<td>job</td>
+					<td><input type="text" name="showjob"></td>
+				</tr>
+				<tr>
+					<td>payment</td>
+					<td><input type="text" name="payment"></td>
+				</tr>
+
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

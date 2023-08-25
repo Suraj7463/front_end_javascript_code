@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		document.write("<table border='1' cellpading='5'>")
+		document.write("<tr>");
+		document.write("<td> pid </td>");
+		document.write("<td> cname </td>");
+		document.write("<td> pname </td>");
+		document.write("<td> rate </td>");
+		document.write("<td> qty </td>");
+		document.write("<td> bill </td>");
+		document.write("</tr>")
+
+		var tba=0;
+		var disc=0;
+		var fba=0;
+		var tpb=0;
+
+
+		do
+		{
+			var pid=parseInt(prompt("enter id"))
+			var cname=prompt("enter cname")
+			var pname=prompt("enter pname");
+			var rate=parseInt(prompt("enter rate of product"));
+			var qty=parseInt(prompt("enter pty"));
+
+			var bill=rate*qty;
+			var tba=tba+bill;
+			var disc=40*tba/100;
+			var fba=tba-disc; 
+			tpb++;
+
+
+
+			document.write("<tr>");
+		    document.write("<td>"+pid+"</td>");
+		    document.write("<td>"+cname+"</td>");
+		    document.write("<td>"+pname+"</td>");
+		    document.write("<td>"+rate+"</td>");
+		    document.write("<td>"+qty+"</td>");
+		    document.write("<td>"+bill+"</td>");
+		    document.write("</tr>")
+
+			var ch= prompt("buy other product to press 1 otherwise pres 2")
+
+
+		}while(ch==1)
+
+		document.write("<tr>");
+		document.write("<td colspan='5'>total bill is </td>");
+		document.write("<td>"+tba+"</td>");
+		document.write("</tr>")
+
+		document.write("<tr>");
+		document.write("<td colspan='5'>Discount is </td>");
+		document.write("<td>"+disc+"</td>");
+		document.write("</tr>")
+
+		document.write("<tr>");
+		document.write("<td colspan='5'>final bill amount </td>");
+		document.write("<td>"+fba+"</td>");
+		document.write("</tr>")
+
+		document.write("<tr>");
+		document.write("<td colspan='5'>total product is </td>");
+		document.write("<td>"+tpb+"</td>");
+		document.write("</tr>")
+	</script>
+</head>
+<body>
+
+</body>
+</html>

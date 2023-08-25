@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function myfun()
+		{
+			var c=0;
+			
+			var price=0;
+			
+			for(i=0;i<=5;i++)
+			{
+				if(document.f1.bk[i].checked==true)
+				{
+					var bookjs=parseInt(document.f1.bk[i].value);
+					var price=price+bookjs;
+					
+					
+				}
+				var c=c+1;
+				document.f1.tp.value=price;
+			}
+			document.f1.qty.value=c;
+		}
+		function showdate()
+		{
+			var d=new Date();
+			var dd=d.getDate();
+			var monthArray=["JAN","FEB","MAR","APRI","MAY","JUN"];
+			var mm=monthArray[d.getMonth()]
+			var yy=d.getFullYear();
+			var datejs=dd+"/"+mm+"/"+yy;
+			document.f1.pd.value=datejs;
+			var ctime=d.toLocaleTimeString();
+			document.f1.pt.value=ctime;
+		}
+		
+	</script>
+</head>
+<body onload="showdate()">
+	<center>
+		<form name="f1">
+			<table cellpadding="7" border="1" align="center">
+				<tr>
+					<td colspan="2" align="center"><h2>BOOK SHOP</h2></td>
+
+				</tr>
+				<tr>
+					<td>Custmer Name</td>
+					<td><input type="text" name="cname"></td>
+				</tr>
+				<tr>
+					<td>Book</td>
+					<td>
+						<input type="checkbox" name="bk" value="400"  onclick="myfun()">English<br>
+						<input type="checkbox" name="bk" value="100" onclick="myfun()">mathematics><br>
+						<input type="checkbox" name="bk" value="200" onclick="myfun()">genral knowledge<br>
+						<input type="checkbox" name="bk" value="300" onclick="myfun()">story book<br>
+						<input type="checkbox" name="bk" value="500" onclick="myfun()">English gramm<br>
+					</td>
+				</tr>
+				<tr>
+					<td>Total Book </td>
+					<td><input type="text" name="qty" onkeyup="myfun()"></td>
+				</tr>
+				<tr>
+					<td>Total Price</td>
+					<td><input type="text" name="tp" onclick="myfun()"></td>
+				</tr>
+				<tr>
+					<td>Purches Date</td>
+					<td><input type="text" name="pd" readonly ></td>
+				</tr>
+				<tr>
+					<td>purches time</td>
+					<td><input type="text" name="pt"></td>
+				</tr>
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

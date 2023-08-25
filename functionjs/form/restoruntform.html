@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        function myfun() {
+            var menujs = parseInt(document.f1.menu.value);
+            document.f1.pri.value = menujs;
+
+            var rotijs = parseInt(document.f1.rt.value);
+            document.f1.tp.value = menujs + (rotijs * 10);
+
+        }
+    </script>
+</head>
+
+<body bgcolor="green">
+    <center>
+        <form name="f1">
+            <table cellpadding="7" align="center" border="1" bgcolor="red">
+                <tr>
+                    <td colspan="2" align="center">
+                        <h2>RESTORUNT BILL RICIPT</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Costumer Name</td>
+                    <td><input type="text" name="sname"></td>
+                </tr>
+                <tr>
+                    <td>Menucard</td>
+                    <td>
+                        <input type="radio" name="menu" value="80" onclick="myfun()">egg kari
+                        <input type="radio" name="menu" value="120" onclick="myfun()">Chiken kari
+                        <input type="radio" name="menu" value="60" onclick="myfun()">veg thali
+                        <input type="radio" name="menu" value="20">pohe
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td>price</td>
+                    <td><input type="text" name="pri"></td>
+                </tr>
+                <tr>
+                    <td>roti</td>
+                    <td><input type="text" name="rt" onkeyup="myfun()"></td>
+                </tr>
+                <tr>
+                    <td>total price</td>
+                    <td><input type="text" name="tp"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="button" value="print" onclick="print()">
+                        <input type="reset" value="reset">
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    </center>
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        function myfun() {
+            document.f1.ts.value = 40;
+            var trjs = parseInt(document.f1.tr.value);
+            document.f1.tosp.value = trjs;
+            var bkjs = 0;
+            var bkjs = parseInt(document.f1.bs.value);
+            document.f1.yts.value = bkjs;
+
+            if (trjs == 500) {
+                document.f1.st.value = "sitting";
+            }
+            if (trjs == 600) {
+                document.f1.st.value = "sleepery";
+            }
+
+            var serjs = 0;
+            for (i = 0; i <= 4; i++) {
+                if (document.f1.ser[i].checked == true) {
+                    var serjs = serjs + parseInt(document.f1.ser[i].value);
+                    document.f1.sp.value = serjs;
+                }
+            }
+            var serpri = parseInt(document.f1.sp.value);
+            var sitjs = trjs * bkjs;
+            var fibjs = sitjs + serpri;
+            document.f1.fb.value = fibjs;
+
+            var totjs = document.f1.ts.value;
+            var availjs = totjs - bkjs;
+            document.f1.as.value = availjs;
+
+
+        }
+
+        function showdate() {
+            d = new Date()
+            dd = d.getDate()
+            yy = d.getFullYear()
+            var Arraymonth = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'ACTO', 'NOV', 'DEC'];
+            mm = Arraymonth[d.getMonth()];
+            var cdate = dd + "/" + mm + "/" + yy;
+            document.f1.dt.value = cdate;
+            var timejs = d.toLocaleTimeString()
+            document.f1.tm.value = timejs;
+
+        }
+    </script>
+    <style>
+        .buttonclass {
+            padding: 10px;
+            margin: 20px;
+            border-radius: 5px;
+            font-size: 20px;
+            background-color: rgb(255, 0, 13);
+            border-radius: 15px;
+            color: white;
+        }
+        
+        .buttonclass:hover {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body onload="showdate()" bgcolor="yellow">
+    <center>
+        <form name="f1">
+            <table cellpadding="7" align="center" border="1">
+                <tr>
+                    <td colspan="2" align="center">
+                        <h2>Travels</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CUSTOMER NAME</td>
+                    <td><input type="text" name="cname"></td>
+                </tr>
+                <tr>
+                    <td>Total sits</td>
+                    <td><input type="text" name="ts" value="40"></td>
+                </tr>
+                <tr>
+                    <td>how many booking sit</td>
+                    <td><input type="text" name="bs" onkeyup="myfun()"></td>
+                </tr>
+
+                <tr>
+                    <td>Travels</td>
+                    <td>
+                        <input type="radio" name="tr" value="600" onclick="myfun()">sleepery
+                        <input type="radio" name="tr" value="500" onclick="myfun()">sitting
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Service</td>
+                    <td>
+                        <input type="checkbox" name="ser" value="15" onclick="myfun()">tea
+                        <input type="checkbox" name="ser" value="150" onclick="myfun()">lunch
+                        <input type="checkbox" name="ser" value="25" onclick="myfun()">coffee
+                        <input type="checkbox" name="ser" value="10" onclick="myfun()">chipse
+                        <input type="checkbox" name="ser" value="200" onclick="myfun()">dinner
+                    </td>
+                </tr>
+                <tr>
+                    <td>sit type</td>
+                    <td><input type="text" name="st"></td>
+                </tr>
+                <tr>
+                    <td>service price</td>
+                    <td><input type="text" name="sp" onclick="myfun()"></td>
+                </tr>
+                <tr>
+                    <td>Travels one sit price</td>
+                    <td><input type="text" name="tosp" onclick="myfun()"></td>
+                </tr>
+                <tr>
+                    <td>Your Total sit</td>
+                    <td><input type="text" name="yts" onclick="myfun()"></td>
+                </tr>
+                <tr>
+                    <td>Final bill</td>
+                    <td><input type="text" name="fb"></td>
+                </tr>
+                <tr>
+                    <td>Available sit</td>
+                    <td><input type="text" name="as"></td>
+                </tr>
+                <tr>
+                    <td>date</td>
+                    <td><input type="text" name="dt"></td>
+                </tr>
+                <tr>
+                    <td>time</td>
+                    <td><input type="text" name="tm"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="book sit" class="buttonclass">
+                        <input type="button" value="print" onclick="print()" class="buttonclass">
+                    </td>
+                </tr>
+
+
+
+            </table>
+        </form>
+    </center>
+
+</body>
+
+</html>

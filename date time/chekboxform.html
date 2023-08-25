@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function my_fun()
+		{
+			var toc=document.f1.toc.value;
+			if(toc=="Fresher")
+			{
+				document.getElementById("row1").style.display="none";
+				document.getElementById("row2").style.display="none";
+				document.getElementById("row3").style.display="none";
+			}
+			if(toc=="Experience")
+			{
+				document.getElementById("row1").style.display="";
+				document.getElementById("row2").style.display="";
+				document.getElementById("row3").style.display="";
+			}
+		}
+	</script>
+</head>
+<body>
+	<form name="f1">
+		<center>
+			<table cellpadding="5" border="1" align="center">
+				<tr>
+					<td align="center" colspan="2"><h1>Job Registration</h1></td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td><input type="text" name="name"></td>
+				</tr>
+				<tr>
+					<td>Technical Skill</td>
+					<td>
+						<input type="checkbox" name="skill" value="C">C
+						<input type="checkbox" name="skill" value="CPP">CPP
+						<input type="checkbox" name="skill" value="java">java
+						<input type="checkbox" name="skill" value="python">python
+					</td>
+				</tr>
+				<tr>
+					<td>Types Of Candidate</td>
+					<td><input type="radio" name="toc" value="Frasher" onclick="my_fun()">Fresher
+						<input type="radio" name="toc" value="Experience" onclick="my_fun()">Experience</td>
+				</tr>
+				<tr id="row1">
+					<td>Last Company</td>
+					<td><input type="text" name="lastcompany"></td>
+				</tr>
+				<tr id="row2">
+					<td>Last CTC</td>
+					<td><input type="text" name="lastctc"></td>
+				</tr>
+				<tr id="row3">
+					<td>Experience year</td>
+					<td><input type="text" name="e_year"></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td>
+						<input type="email" name="email">
+					</td>
+				</tr>
+				<tr>
+					<td>Phone number</td>
+					<td>
+						<input type="number" name="num">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" value="register">
+						<input type="reset" value="reset">
+					</td>
+				</tr>
+			</table>
+		</center>
+		
+	</form>
+
+</body>
+</html>

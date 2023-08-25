@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function myfun()
+		{
+			var rate=0;
+			var rate=parseInt(document.f1.milk.value);
+			document.f1.rat.value=rate;
+			var qtyjs=parseInt(document.f1.qty.value);
+			var billjs=qtyjs*rate;
+			document.f1.bill.value=billjs;
+
+			d=new Date;
+			var dd=d.getDate();
+			var Arraymonth=["jan","feb","mar"];
+
+			var mm=Arraymonth[d.getMonth()];
+			var yy=d.getFullYear();
+
+			var datejs=dd+"/"+mm+"/"+yy;
+			document.f1.dt.value=datejs;
+
+			var timejs=d.toLocaleTimeString();
+			document.f1.tm.value=timejs;
+
+		}
+		
+	</script>
+</head>
+<body onload="myfun()">
+	<form name="f1">
+		<center>
+			<table cellpadding="5" border="1" bgcolor="red">
+				<tr>
+					<td colspan="2" align="center" bgcolor="green"><h2>Chitale Diary</h2></td>
+				</tr>
+				<tr>
+					<td>Customer Name</td>
+					<td><input type="text" name="cname"></td>
+				</tr>
+				<tr>
+					<td>Type of Milk</td>
+					<td>
+						<input type="radio" name="milk" value="40" onclick="myfun()">Cow
+						<input type="radio" name="milk" value="50" onclick="myfun()">Buffalo
+						<input type="radio" name="milk" value="80" onclick="myfun()">GiriCow
+					</td>
+				</tr>
+				<tr>
+					<td>RATE</td>
+					<td><input type="text" name="rat"></td>
+				</tr>
+				<tr>
+					<td>Quantity</td>
+					<td><input type="text" name="qty" onkeyup="myfun()"></td>
+				</tr>
+				<tr>
+					<td>Bill amount</td>
+					<td><input type="text" name="bill"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" value="Submit">
+						<input type="button" value="print" onclick="print()">
+						<input type="reset" value="reset">
+					</td>
+				</tr>
+				<tr>
+					<td>Date</td>
+					<td><input type="text" name="dt"></td>
+				</tr>
+				<tr>
+					<td>Time</td>
+					<td><input type="text" name="tm"></td>
+				</tr>
+			</table>
+
+		</center>
+	</form>
+
+</body>
+</html>

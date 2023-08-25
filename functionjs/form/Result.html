@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        function myresult() {
+            var p = parseInt(document.f1.phy.value)
+            var c = parseInt(document.f1.che.value)
+            var m = parseInt(document.f1.math.value)
+
+            var tmark = p + c + m;
+
+            var per = tmark / 3;
+
+            document.f1.tm.value = tmark;
+            document.f1.per.value = per;
+
+            if (p >= 40 && c >= 40 && m >= 40) {
+                document.f1.result.value = "pass";
+            } else {
+                document.f1.result.value = "fail";
+            }
+        }
+    </script>
+</head>
+
+<body bgcolor="yellow">
+    <center>
+        <form name="f1">
+            <table cellpadding="5" border="1">
+                <tr>
+                    <td colspan="2" align="center">
+
+                        <tr>
+                            <td colspan="2" align="center" bgcolor="red">
+                                <h1>SITS Result</h1>
+                            </td>
+                        </tr>
+
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>name</td>
+                    <td><input type="text" name="sname" placeholder="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>physics</td>
+                    <td><input type="text" name="phy" placeholder="marks"></td>
+                </tr>
+                <tr>
+                    <td>
+                        chemistry
+                    </td>
+                    <td><input type="text" name="che" placeholder="marks"></td>
+                </tr>
+                <tr>
+                    <td>mathematics</td>
+                    <td><input type="text" name="math" placeholder="marks"></td>
+                </tr>
+
+                <tr>
+                    <td align="center" colspan="2">
+                        <input type="button" value="Result" onclick="myresult()">
+                        <input type="reset" value="cancel">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Total mark
+                    </td>
+                    <td><input type="text" name="tm" placeholder="total marks"></td>
+                </tr>
+                <tr>
+                    <td>Percentage</td>
+                    <td><input type="text" name="per" placeholder="percentage"></td>
+                </tr>
+                <tr>
+                    <td>Result</td>
+                    <td><input type="text" name="result" placeholder="pass/fail"></td>
+                </tr>
+            </table>
+
+        </form>
+    </center>
+
+</body>
+
+</html>

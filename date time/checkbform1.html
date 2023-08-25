@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function myfun()
+		{
+			var city="";
+			for(var i=0;i<=3;i++)
+			{
+				if(document.f1.city[i].checked==true)
+				{
+					var city=city+document.f1.city[i].value+" ";
+				}
+				
+			}
+			document.f1.selected_city.value=city;
+			var ser="";
+			for(var i=0;i<=4;i++)
+			{
+				if(document.f1.service[i].checked==true)
+				{
+					var ser=ser+document.f1.service[i].value+" ";
+				}
+			}
+			document.f1.selected_service.value=ser;
+		}
+		
+	</script>
+</head>
+<body>
+	<center>
+		<form name="f1" action="login.php" method="post">
+			<table cellpadding="10" align="center" border="1">
+				<tr>
+					<th colspan="2" align="center"><h2>Frasco Travel Tour</h2></th>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td><input type="text" name="fname"></td>
+				</tr>
+				<tr>
+					<td>City</td>
+					<td>
+						<input type="checkbox" name="city" value="Mumbai" onclick="myfun()">Mumbai
+						<input type="checkbox" name="city" value="Dubai" onclick="myfun()">Dubai
+						<input type="checkbox" name="city" value="Dilhi" onclick="myfun()">Dilhi
+						<input type="checkbox" name="city" value="Latur" onclick="myfun()">Latur
+					</td>
+				</tr>
+				<tr>
+					<td>
+						age
+					</td>
+					<td><input type="text" name="g"></td>
+				</tr>
+				<tr>
+					<td>Service</td>
+					<td>
+						<input type="checkbox" name="service" value="Breakfast" onclick="myfun()">Breakfast;
+						<input type="checkbox" name="service" value="Lunch" onclick="myfun()">Lunch;
+						<input type="checkbox" name="service" value="Dinner" onclick="myfun()">Dinner;
+						<input type="checkbox" name="service" value="Snacks" onclick="myfun()">Snacks;
+						<input type="checkbox" name="service" value="Tea/coffee" onclick="myfun()">Tea/Coffee;
+
+
+
+					</td>
+				</tr>
+
+				<tr>
+					<td>Selected City</td>
+					<td><input type="text" name="selected_city"></td>
+				</tr>
+				<tr>
+					<td>Selected Service</td>
+					<td><input type="text" name="selected_service"></td>
+				</tr>
+				
+				<tr>
+					<td colspan="2" align="center">
+						<input type="button" value="submit">
+						<input type="reset" name="reset">
+					</td>
+				</tr>
+				
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

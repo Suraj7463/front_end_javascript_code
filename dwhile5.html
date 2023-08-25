@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		 document.write("<table border='1' cellpading='5'>");
+		 document.write("<tr>");
+		 document.write("<td>empid</td>");
+		 document.write("<td>emp name</td>");
+		 document.write("<td>job</td>");
+		 document.write("<td>wages</td>");
+		 document.write("<td>wdays</td>");
+		 document.write("<td>payment</td>");
+		 document.write("<td>tax</td>");
+		 document.write("<td>finalpayment</td>");
+		document.write("</tr>");
+
+		 var ts=0;
+		 var tex=0;
+		 var tenx=0;
+		 var tax=0;
+
+		do
+		{
+			var empid=parseInt(prompt("enter empid"));
+			var empname=prompt("enter employee name");
+			var job=prompt("enter job of emp");
+			var wages=parseInt(prompt("enter wages"));
+			var wdays=parseInt(prompt("enter days"));
+			
+			var pyment=wages*wdays;
+
+			if(pyment>20000)
+			{
+				tax=0.20*pyment;
+				
+				tex++;
+
+			}
+			else
+			{
+				document.write(0);
+				tenx++;
+				
+
+			}
+
+			var fp=pyment-tax;
+			var ts=ts+pyment
+			document.write("<tr>");
+		    document.write("<td>"+empid+"</td>");
+		    document.write("<td>"+empname+"</td>");
+		    document.write("<td>"+job+"</td>");
+		    document.write("<td>"+wages+"</td>");
+		    document.write("<td>"+wdays+"</td>");
+		    document.write("<td>"+pyment+"</td>");
+		    document.write("<td>"+tax+"</td>");
+		    document.write("<td>"+fp+"</td>");
+
+		    document.write("</tr>");
+
+
+		    var ch=prompt("enter number add other emp press 1 otherwise  press 2");
+		}while(ch==1)
+		document.write("<tr>");
+		document.write("<td colspan='7'>total salary is </td>");
+		document.write("<td>"+ts+"</td>");
+		document.write("</tr>")
+
+		document.write("<tr>");
+		document.write("<td colspan='7'>total employee taxable </td>");
+		document.write("<td>"+tex+"</td>");
+		document.write("</tr>")
+
+		document.write("<tr>");
+		document.write("<td colspan='7'>total employee non taxable </td>");
+		document.write("<td>"+tenx+"</td>");
+		document.write("</tr>")
+
+
+
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

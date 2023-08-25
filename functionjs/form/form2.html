@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function studinfo()
+		{
+			var fn=document.f1.fname.value;
+			document.f1.showname.value=fn 
+			var tech=document.f1.tech.value;
+			document.f1.showtech.value=tech;
+			
+			document.f1.showBranch.value=document.f1.Branch.value;
+			}
+		
+	</script>
+</head>
+<body>
+	<center>
+		<form name="f1">
+			<table cellpadding="7">
+				<tr>
+					<th colspan="2">
+						<h1>Anvistar Enquiry Form</h1>
+					</th>
+				</tr>
+				<tr>
+					<td>Full Name</td>
+					<td><input type="text" name="fname"></td>
+				</tr>
+				<tr>
+					<td>Technology</td>
+					<td><input type="radio" name="tech" value="Internship">Internship
+						<input type="radio" name="tech" value="Modular">Modular
+						<input type="radio" name="tech" value="job oriented">job oriented
+
+
+					</td>
+						
+
+				</tr>
+				<tr>
+					<td>Branch</td>
+					<td>
+						<select name="Technology">
+							<option disabled="selected">Select Technology</option>
+							<option value="computer">Computer</option>
+							<option value="IT">IT</option>
+							<option value="EnTc">EnTc</option>
+							<option value="Mechanical">Mechanical</option>
+							
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="button" value="Show info" onclick="studinfo()">
+						<input type="reset" value="Cancel">
+					</td>
+				</tr>
+				<tr>
+					<td>Candidate Name</td>
+					<td><input type="text" name="showname"></td>
+
+				</tr>
+				<tr>
+					<td>Candidate Technology</td>
+					<td><input type="text" name="showtech"></td>
+				</tr>
+				<tr>
+					<td>Candidate Branch</td>
+					<td><input type="text" name="showBranch"></td>
+				</tr>
+
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

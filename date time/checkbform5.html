@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function myfun()
+		{
+			var price=0;
+			var c=0;
+			for(i=0;i<=4;i++)
+			{
+				if(document.f1.book[i].checked==true)
+				{
+					var price=price+parseInt(document.f1.book[i].value)
+					var c=c+1;
+				}
+				document.f1.top.value=price;
+			}
+			document.f1.tob.value=c;
+			d=new Date()
+			dd=d.getDate();
+			monthArray=["JAN","FEB","MAR","April","MAY"];
+			mm=monthArray[d.getMonth()];
+			yy=d.getFullYear();
+
+			var cdate=dd+"/"+mm+"/"+yy;
+			document.f1.pd.value=cdate;
+			var ctime=d.toLocaleTimeString();
+			document.f1.pt.value=ctime;
+		}
+		
+	</script>
+</head>
+<body onload="myfun()">
+	<center>
+		<form name="f1">
+			<table cellpadding="5" border="1" align="center">
+				<tr bgcolor="red">
+					<td colspan="2" align="center"><h2>book shop</h2></td>
+				</tr>
+				<tr>
+					<td>customer name</td>
+					<td><input type="text" name="cname"></td>
+				</tr>
+				<tr>
+					<td>book</td>
+					<td>
+						<input type="checkbox" name="book" value="200" onclick="myfun()">english<br>
+						<input type="checkbox" name="book" value="300" onclick="myfun()">chemistry<br>
+						<input type="checkbox" name="book" value="350" onclick="myfun()">Biology<br>
+						<input type="checkbox" name="book" value="350" onclick="myfun()">Python<br>
+						<input type="checkbox" name="book" value="250" onclick="myfun()">math
+
+					</td>
+				</tr>
+				<tr>
+					<td>total price</td>
+					<td><input type="text" name="top"></td>
+				</tr>
+				<tr>
+					<td>total book</td>
+					<td><input type="text" name="tob"></td>
+				</tr>
+				<tr>
+					<td>purches date</td>
+					<td><input type="text" name="pd"></td>
+				</tr>
+				<tr>
+					<td>purches time</td>
+					<td><input type="text" name="pt"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" value="submit">
+						<input type="button" value="print" onclick="print()">
+					</td>
+				</tr>
+				
+			</table>
+		</form>
+	</center>
+
+</body>
+</html>

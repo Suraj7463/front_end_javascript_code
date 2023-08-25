@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		document.write("<center><table border='1' cellpadding='5'>")
+		document.write("<tr>")
+		document.write("<td> name <td>")
+		document.write("<td> technical <td>")
+		document.write("<td> apty <td>")
+		document.write("<td> english <td>")
+		document.write("<td> score <td>")
+		document.write("<td> compny <td>")
+		document.write("<td> status <td>")
+		document.write("<tr>")
+
+		do
+		{
+			var name=prompt("Enter name");
+			var tech=parseInt(prompt("Enter tech mark"));
+			var apty=parseInt(prompt("Enter Apty mark"));
+			var english=parseInt(prompt("Enter english mark"));
+
+			var score=tech+apty+english
+			if(score>=150)
+			{
+				
+				var compny="6 to 8 package"
+				var status="selected"
+			}
+			else if(score>=100)
+			{
+				
+				var compny="4 to 6 package"
+				var status="selected"
+			}
+			else
+			{
+				compny="na"
+				status="Rejected"
+
+
+			}
+
+			document.write("<tr>")
+			document.write("<td>"+name+"<td>")
+			document.write("<td>"+tech+"<td>")
+			document.write("<td>"+apty+"<td>")
+			document.write("<td>"+ english+"<td>")
+			document.write("<td>"+score+"<td>")
+			document.write("<td>"+compny+"<td>")
+			document.write("<td>"+status+"<td>")
+			document.write("</tr>")
+
+		
+
+
+
+			var ch=prompt("press 1 or press 2")
+		
+		}while(ch==1)
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>
